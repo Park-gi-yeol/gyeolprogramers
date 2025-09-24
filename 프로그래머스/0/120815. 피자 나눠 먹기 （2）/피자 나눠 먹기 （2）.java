@@ -4,7 +4,7 @@ class Solution {
         int pizza = 6;
         int i = 1;
 		while (true) {
-			
+	 
 			if(pizza * i % n == 0 && n!= 0) {
 				answer = i;
 				break;
