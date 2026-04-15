@@ -1,11 +1,9 @@
 class Solution {
-    public int solution(int number, int n, int m) {
+    public int solution(int num, int n, int m) {
         int answer = 0;
-        if(number % n == 0 & number % m == 0) {
-            answer = 1;
-        } else {
-            answer = 0;
-        }
+        if(num % n == 0 && num % m == 0 ) {
+			answer = 1;
+		}
         return answer;
     }
 }
