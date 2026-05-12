@@ -1,19 +1,12 @@
 class Solution {
     public int solution(int[] num_list) {
         int answer = 0;
-        int a = 0 ;
-		int b = 0;
+        int[] sum = {0,0};
+		
 		for(int i = 0; i < num_list.length; i++) {
-			if(i % 2 == 0 ) {
-				a += num_list[i];
-			}
+			sum[i%2] += num_list[i];
 		}
-		for(int i = 0; i < num_list.length; i++) {
-			if(i % 2 == 1 ) {
-				b += num_list[i];
-			}
-		}
-		answer = (a > b) ? a : b;
+		answer = Math.max(sum[0], sum[1]);
         return answer;
     }
 }
