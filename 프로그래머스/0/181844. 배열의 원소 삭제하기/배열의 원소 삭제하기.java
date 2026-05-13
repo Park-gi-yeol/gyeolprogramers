@@ -2,15 +2,12 @@ import java.util.ArrayList;
 class Solution {
     public ArrayList<Integer> solution(int[] arr, int[] delete_list) {
         ArrayList<Integer> answer = new ArrayList<Integer>();
-		for(int i = 0; i < arr.length; i++) {
-			answer.add(arr[i]);
+		for(int i : arr) {
+			answer.add(i);
 		}
-		
-		for(int i = 0; i < arr.length; i++) {
-			for(int j =0; j < delete_list.length; j++) {
-				if(arr[i] == delete_list[j]) {
-					answer.remove(Integer.valueOf(delete_list[j]));
-				} 
+		for(int i = 0; i < delete_list.length; i++) {
+			if(answer.contains(delete_list[i])) {
+				answer.remove((Integer)delete_list[i]);
 			}
 		}
         return answer;
